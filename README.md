@@ -6,6 +6,9 @@ Contribuindo com projetos de codigo aberto.
 Link do curso [PyTools](https://plataforma.dev.pro.br/31287-pytools)
 
 [![Build Status](https://www.travis-ci.com/danielngd/libestudos.svg?branch=main)](https://www.travis-ci.com/danielngd/libestudos)
+[![Updates](https://pyup.io/repos/github/danielngd/libestudos/shield.svg)](https://pyup.io/repos/github/danielngd/libestudos/)
+[![Python 3](https://pyup.io/repos/github/danielngd/libestudos/python-3-shield.svg)](https://pyup.io/repos/github/danielngd/libestudos/)
+
 
 Suportado versão 3 de Python
 

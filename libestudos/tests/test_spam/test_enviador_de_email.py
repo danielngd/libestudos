@@ -1,4 +1,5 @@
-from libestudos.spam.enviador_de_email import Enviador
+from libestudos.spam.enviador_de_email import EmailInvalido, Enviador
+import pytest
 
 
 def test_criar_enviador_de_email():
@@ -6,13 +7,32 @@ def test_criar_enviador_de_email():
     assert enviador is not None
 
 
-def test_remetente():
+@pytest.mark.parametrize(
+    'remetente',
+    ['daniel_xp_@hotmail.com', 'daniel.ngd@gmail.com']
+)
+def test_remetente(remetente):
     enviador = Enviador()
     resultado = enviador.enviar(
-        'daniel.ngd@gmail.com',
+        remetente,
         'daniel_xp_@hotmail.com',
         'Curso PyTools',
         'Primeiro curso com testes no Pytools.'
     )
 
-    assert 'daniel.ngd@gmail.com' in resultado
+    assert remetente in resultado
+
+
+@pytest.mark.parametrize(
+    'remetente',
+    ['', 'daniel']
+)
+def test_remetente_invalido(remetente):
+    enviador = Enviador()
+    with pytest.raises(EmailInvalido):
+        enviador.enviar(
+            remetente,
+            'daniel_xp_@hotmail.com',
+            'Curso PyTools',
+            'Primeiro curso com testes no Pytools.'
+        )

@@ -10,4 +10,9 @@ py>=1.8.2
 toml<=0.10.2
 iniconfig<=1.1.1
 attrs<=21.2.0
+
+# Coverage
+coverage==5.5
+pytest-cov==2.12.1
+
 -r requirements.txt

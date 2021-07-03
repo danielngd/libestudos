@@ -14,5 +14,5 @@ def test_remetente():
         'Curso PyTools',
         'Primeiro curso com testes no Pytools.'
     )
-    
-    assert 'daniel.ngd@gmail.com'in resultado
+
+    assert 'daniel.ngd@gmail.com' in resultado
